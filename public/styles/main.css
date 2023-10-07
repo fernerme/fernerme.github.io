@@ -1,13 +1,25 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&family=MonteCarlo&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=MonteCarlo&display=swap');
+
+    /*The sexy colors in my color scheme:
+        #94738B
+        #91467D
+        #DEADD1
+    Used in background:
+        #453641
+        #5E2D51
+    */
+
 :root {
     --vertical-space: 2rem;
     --horizontal-space: 3rem;
 
-    --light-color:#000000;
-    --body-color: #000000;
-    --heading-color: #000000;
-    --contrast-color: #000000;
+    --body-color: #453641;
+    --heading-color: #94738B;
+    --body-heading-color: #5E2D51;
+    --link-color: #9E7B95;
+    --footer-color: #94738B;
+    --link-hover-color: #DEADD1;
 }
 
 body {
@@ -24,15 +36,7 @@ body {
     grid-template-rows: auto auto 1fr auto;
 }
 
-/* medium screen */
-@media (min-width: 25em) {
-    body {
-        grid-template-areas: "head head"
-                                "nav main"
-                                "foot foot";
-        grid-template-rows: auto 1fr auto;
-    }
-}
+
 
 body>* {
     padding-left: var(--horizontal-space);
@@ -59,33 +63,44 @@ body>nav ul li {
 
 body>main {
     grid-area: main;
+    background-color: white;
+    margin-right: 3%;
+    margin-left: 3%;
 }
 
 body>footer {
     grid-area: foot;
+    color: var(--footer-color);
 }
 
-/* main {
-    background-color: rgba(~rgb color~, 0.7;
-} */
+main>h1 {
+    color: var(--heading-body-color);
+}
 
 h1,
-h2,
-h3 {
+h2 {
     line-height: 1.2;
     font-family: 'MonteCarlo', cursive;
     color: var(--heading-color);
     /* font-family: 'Mea Culpa', cursive; */
 }
 
-/* link stuff */
-a {
-
+h3 {
+    line-height: 1.2;
+    font-family: 'Abel', sans-serif;
+    color: var(--body-color);
+    /* font-family: 'Mea Culpa', cursive; */
 }
 
-/* link when you cover */
-a:hover {
 
+/* link stuff */
+a {
+    color: var(--link-color);
+}
+
+/* link when you hover */
+a:hover {
+    color: var(--link-hover-color);
 }
 
 body#about img {
@@ -129,5 +144,54 @@ body#portfolio ul#portfolioItems li img {
 
 /* stolen from https://www.gradientmagic.com/collection/subtlegrid */
 .bgImage {
-background-image: linear-gradient(45deg, rgba(254, 246, 210, 0.53) 0%, rgba(254, 246, 210, 0.53) 14.286%,rgba(221, 240, 216, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 28.572%,rgba(188, 233, 223, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 42.858%,rgba(156, 227, 229, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 57.144%,rgba(123, 220, 235, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 71.42999999999999%,rgba(90, 214, 242, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 85.71600000000001%,rgba(57, 207, 248, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 100.002%),linear-gradient(135deg, rgb(246, 99, 200) 0%, rgb(246, 99, 200) 12.5%,rgb(223, 98, 196) 12.5%, rgb(223, 98, 196) 25%,rgb(199, 97, 192) 25%, rgb(199, 97, 192) 37.5%,rgb(176, 96, 188) 37.5%, rgb(176, 96, 188) 50%,rgb(152, 95, 184) 50%, rgb(152, 95, 184) 62.5%,rgb(129, 94, 180) 62.5%, rgb(129, 94, 180) 75%,rgb(105, 93, 176) 75%, rgb(105, 93, 176) 87.5%,rgb(82, 92, 172) 87.5%, rgb(82, 92, 172) 100%)
+    /* background-image: linear-gradient(45deg, rgba(254, 246, 210, 0.53) 0%, rgba(254, 246, 210, 0.53) 14.286%,rgba(221, 240, 216, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 28.572%,rgba(188, 233, 223, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 42.858%,rgba(156, 227, 229, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 57.144%,rgba(123, 220, 235, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 71.42999999999999%,rgba(90, 214, 242, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 85.71600000000001%,rgba(57, 207, 248, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 100.002%),linear-gradient(135deg, rgb(246, 99, 200) 0%, rgb(246, 99, 200) 12.5%,rgb(223, 98, 196) 12.5%, rgb(223, 98, 196) 25%,rgb(199, 97, 192) 25%, rgb(199, 97, 192) 37.5%,rgb(176, 96, 188) 37.5%, rgb(176, 96, 188) 50%,rgb(152, 95, 184) 50%, rgb(152, 95, 184) 62.5%,rgb(129, 94, 180) 62.5%, rgb(129, 94, 180) 75%,rgb(105, 93, 176) 75%, rgb(105, 93, 176) 87.5%,rgb(82, 92, 172) 87.5%, rgb(82, 92, 172) 100%) */
+    background-image: repeating-linear-gradient(45deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(0deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(135deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(94,45,81),rgb(69,54,65));
+}
+
+
+
+/* in-between screen (small enough to look ridiculous but not small enough to warrent mobile formatting)*/
+@media (min-width: 30em) {
+    body {
+        grid-template-areas: "head head"
+                                "nav main"
+                                "foot foot";
+        grid-template-rows: auto 1fr auto;
+    }
+
+    body#about img {
+        /* padding-left: var(--vertical-space); */
+        margin-right: var(--vertical-space);
+    }
+
+    body>main {
+        grid-area: main;
+        background-color: white;
+        margin-right: 3%;
+    }
+    
+}
+
+/* medium to large screen */
+@media (min-width: 40em) {
+    body {
+        grid-template-areas: "head head"
+                                "nav main"
+                                "foot foot";
+        grid-template-rows: auto 1fr auto;
+    }
+
+    body#about img {
+        /* padding-left: var(--vertical-space); */
+        float: left;
+        display: inline;
+        margin-right: var(--vertical-space);
+    }
+
+    body>main {
+        grid-area: main;
+        background-color: white;
+        margin-right: 3%;
+    }
+    
 }
