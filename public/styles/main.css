@@ -37,7 +37,6 @@ body {
 }
 
 
-
 body>* {
     padding-left: var(--horizontal-space);
     padding-right: var(--horizontal-space);
@@ -74,22 +73,25 @@ body>footer {
 }
 
 main>h1 {
-    color: var(--heading-body-color);
+    color: var(--heading-color);
 }
 
-h1,
-h2 {
+h1{
     line-height: 1.2;
     font-family: 'MonteCarlo', cursive;
     color: var(--heading-color);
-    /* font-family: 'Mea Culpa', cursive; */
+}
+
+h2 {
+    line-height: 1.2;
+    font-family: 'MonteCarlo', cursive;
+    color: var(--heading-body-color);
 }
 
 h3 {
     line-height: 1.2;
     font-family: 'Abel', sans-serif;
     color: var(--body-color);
-    /* font-family: 'Mea Culpa', cursive; */
 }
 
 
@@ -148,6 +150,10 @@ body#portfolio ul#portfolioItems li img {
     background-image: repeating-linear-gradient(45deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(0deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(135deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, hsla(207,0%,63%,0.05) 0px, hsla(207,0%,63%,0.05) 1px,transparent 1px, transparent 11px,hsla(207,0%,63%,0.05) 11px, hsla(207,0%,63%,0.05) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(94,45,81),rgb(69,54,65));
 }
 
+.leadership-position {
+    font-style: italic;
+}
+
 
 
 /* in-between screen (small enough to look ridiculous but not small enough to warrent mobile formatting)*/
@@ -179,6 +185,10 @@ body#portfolio ul#portfolioItems li img {
                                 "nav main"
                                 "foot foot";
         grid-template-rows: auto 1fr auto;
+    }
+
+    body>nav ul li {
+        display: block;
     }
 
     body#about img {
