@@ -76,24 +76,35 @@ main>h1 {
     color: var(--heading-color);
 }
 
-h1{
+h1, h2, h3, h4 {
     line-height: 1.2;
+}
+
+h1{
     font-family: 'MonteCarlo', cursive;
     color: var(--heading-color);
 }
 
 h2 {
-    line-height: 1.2;
+    font-size: 1.5em;
     font-family: 'MonteCarlo', cursive;
+    margin-top: 1em;
     color: var(--heading-body-color);
 }
 
 h3 {
-    line-height: 1.2;
     font-family: 'Abel', sans-serif;
     color: var(--body-color);
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
+h4 {
+    font-family: 'Abel', sans-serif;
+    color: var(--body-color);
+    margin-top: 5px;
+    margin-bottom: 0;
+}
 
 /* link stuff */
 a {
