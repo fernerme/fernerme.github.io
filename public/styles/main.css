@@ -124,6 +124,12 @@ body#about .off-image {
     display: none;
 }
 
+#portfolioItems img {
+    height: auto;
+    width: auto;
+    max-height: 15em;
+}
+
 p {
     max-width: 50em;
 }
@@ -212,6 +218,10 @@ body#portfolio ul#portfolioItems li img {
         background-color: white;
         margin-right: 3%;
     }
+}
+
+/* this looked garbage when i left it with the 40em above so here we are */
+@media (min-width: 50em) {
 
     body#portfolio ul#portfolioItems li {
         flex-basis: 47%;
