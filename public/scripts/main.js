@@ -12,7 +12,6 @@ rhit.handler = function() {
         const newIndex = (rhit.imageIndex + 1) % imgs.length;
 
         imgs.forEach((img) => {
-            console.log(img.dataset.imgIndex);
             if (newIndex == parseInt(img.dataset.imgIndex)) {
                 img.classList.remove("off-image");
             } else if (rhit.imageIndex == parseInt(img.dataset.imgIndex)) {
